@@ -1,7 +1,4 @@
 <?php
-
-use Carro as GlobalCarro;
-
 /**
  * 
  * Public - Fara com que nao haja ocultacao nenhuma, toda propriedade ou metodo declarado com public serao acessiveis por todos que quiserem acessa-los
