@@ -18,9 +18,23 @@ class Veiculo{
     public $ano;
 
     // Metodos
-    public function Andar(){
+
+    
+    private function Andar(){
         echo "Andou" . PHP_EOL;
     }
+
+    // So da para acessar metodos private de dentro da classe
+    public function monstrarAcao(){
+        $this->Andar();
+    }
+
+    // da para acessar metodos proteced somente dentro da classe e 
+    // nas classes que herdam dessa
+    protected function darPartida(){
+        echo "Dando partida..." . PHP_EOL;
+    }
+
 
     public function Para(){
         echo "Parou". PHP_EOL;
@@ -51,6 +65,13 @@ class Carro extends Veiculo{
     public function getModelo(): string{
         return $this->modelo;
     }
+
+
+    // Para acessar um metodo que na classe "MAE" esta como protected
+    // na classe "FILHA"
+    public function executarAcao(){
+        $this->darPartida();
+    }
 }
 
 
@@ -70,5 +91,15 @@ echo $carro->getModelo(). PHP_EOL;
 // Ele vai criar um atributo com mesmo nome na classe Carro e vai inserir nesse e nao no atributo da classe Veiculo 
 $carro->setCor("Azul");
 print_r($carro);
+
+
+
+// Acessando metodos com modificadores
+$veiculo = new Veiculo();
+$veiculo->monstrarAcao();
+
+$carro2 = new Carro();
+$carro2->executarAcao();
+
 
 ?>
