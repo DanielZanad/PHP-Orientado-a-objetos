@@ -12,7 +12,7 @@ $produto->setDescricao('Console da Sony');
 
 // Instanciando a classe onde esta a funcao para inserir os dados no banco
 $produtoDao = new \App\Model\ProdutoDao();
-    // Chamando a funcao `create` dentro do objeto $produtoDao e passando as informacoes dentro do objeto       `$produto` para ser inserido dentro do banco de dados
+    // Chamando a funcao `create` dentro do objeto $produtoDao e passando as informacoes dentro do objeto `$produto` para ser inserido dentro do banco de dados
     $produtoDao->create($produto);
   
     // Usando metodo `update` para atualizar os dados
