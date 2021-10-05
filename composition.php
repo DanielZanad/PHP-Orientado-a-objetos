@@ -1,7 +1,7 @@
 <?php
 /**
  *      Composicao
- *  Na composicao, uma calsse cria a instancia de outra classe dentro de si propria, sendo assim,
+ *  Na composicao, uma classe cria a instancia de outra classe dentro de si propria, sendo assim,
  *  quando ela for destruida, a outra classe tambem sera
  */
 
